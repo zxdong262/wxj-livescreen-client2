@@ -36,8 +36,7 @@ const toQueryParams = function(_obj = {}) {
   return '?' + str.join('&')
 }
 
-@Form.create()
-export default class Index extends React.Component {
+class Index extends React.Component {
 
   constructor(props) {
     super(props)
@@ -307,3 +306,6 @@ export default class Index extends React.Component {
   }
 
 }
+
+
+export default Form.create(Index)
