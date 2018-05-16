@@ -16,7 +16,9 @@ const version = require('./lib/version')
 const menu = require('./lib/menu')
 const {setWin} = require('./lib/win')
 const log = require('electron-log')
+const {saveUserConfig, userConfig} = require('./lib/user-config-controller')
 const rp = require('phin').promisified
+const {saveLangConfig} = require('./lib/locales')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -77,7 +79,7 @@ async function createWindow () {
 
   childPid = child.pid
 
-  if (config.showMenu) Menu.setApplicationMenu(menu)
+  Menu.setApplicationMenu(menu)
 
   // const {width, height} = require('electron').screen.getPrimaryDisplay().workAreaSize
 
@@ -118,6 +120,10 @@ async function createWindow () {
     packInfo,
     os
   })
+
+  timer = setTimeout(() => {
+    saveLangConfig(saveUserConfig, userConfig)
+  }, 100)
 
   let opts = `http://localhost:${config.port}/index.html`
   let childServerUrl = opts + ''

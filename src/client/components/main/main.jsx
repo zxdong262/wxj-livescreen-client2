@@ -37,7 +37,7 @@ const toQueryParams = function(_obj = {}) {
 }
 
 @Form.create()
-export default class Index extends React.Component {
+class Index extends React.Component {
 
   constructor(props) {
     super(props)
@@ -125,14 +125,14 @@ export default class Index extends React.Component {
           Authorization: 'Basic aW1vYS13ZWNoYXQ6'
         }
       })
-      console.log(res)
+      //console.log(res.body)
       if (!res.body.access_token) {
         throw new Error('验证失败，请检查填写的用户名密码或者大屏地址')
       }
       ls.set('form', formData)
       setTimeout(() => {
-        location.href = url
-      }, 200)
+        window.location = url
+      }, 100)
     } catch(e) {
       this.onError(e)
       this.setState({
@@ -307,3 +307,4 @@ export default class Index extends React.Component {
   }
 
 }
+export default Index
