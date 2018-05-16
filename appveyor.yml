@@ -1,0 +1,28 @@
+image: Visual Studio 2017
+os: unstable
+platform:
+  - x64
+
+init:
+  - git config --global core.autocrlf input
+  - yarn
+
+install:
+  - ps: Install-Product node 8 x64
+  - npm i
+
+build_script:
+  - npm run pre-test
+  - npm run output -w
+
+test: off
+skip_tags: true
+cache:
+  - $LOCALAPPDATA/electron/Cache
+  - '%USERPROFILE%\.electron'
+
+branches:
+  # whitelist
+  only:
+    - release
+    - test
