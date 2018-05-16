@@ -1,6 +1,6 @@
 {
   "name": "wxj-livescreen-client2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "无限极产品大屏专用客户端",
   "main": "app.js",
   "scripts": {
@@ -23,6 +23,7 @@
     "preinstall": "rm -rf package-lock.json",
     "postinstall": "node bin/post-install",
     "lint": "./node_modules/.bin/eslint --max-warnings 0 --ext .js --ext .jsx src app bin test",
+    "test": "./node_modules/.bin/mocha test/e2e/*.js",
     "pre-test": "npm run compile && npm run prepare-file"
   },
   "license": "MIT",
@@ -126,6 +127,7 @@
     "find-free-port": "1.2.0",
     "json-deep-copy": "1.0.2",
     "lodash": "4.17.5",
+    "os-locale": "2.1.0",
     "phin": "2.9.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
