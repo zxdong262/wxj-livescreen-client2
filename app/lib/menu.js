@@ -64,6 +64,12 @@ const template = [
         click() {
           require('./win').win.webContents.openDevTools()
         }
+      },
+      {
+        label: '重置用户名/密码/大屏链接',
+        click() {
+          require('./win').win.resetForm()
+        }
       }
     ]
   }

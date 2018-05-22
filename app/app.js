@@ -142,6 +142,9 @@ async function createWindow () {
 
   // Emitted when the window is closed.
   win.on('close', onClose)
+  win.resetForm = () => {
+    ls.set('form', {})
+  }
 
   setWin(win)
 }
