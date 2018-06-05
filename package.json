@@ -1,6 +1,6 @@
 {
   "name": "wxj-livescreen-client2",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "无限极产品大屏专用客户端",
   "main": "app.js",
   "scripts": {
