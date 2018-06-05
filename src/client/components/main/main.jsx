@@ -99,7 +99,7 @@ class Index extends React.Component {
     } = formData
     let arr = url.split('/')
     let host = arr[2]
-    let authUrl = arr[0] + '//' + host + '/imoa-api/oauth/token'
+    let authUrl = arr[0] + '//' + host + '/imoa/oauth/token'
     const p = window.getGlobal('rp')
     let query = {
       username,
