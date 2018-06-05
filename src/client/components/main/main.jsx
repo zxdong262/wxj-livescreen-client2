@@ -231,6 +231,7 @@ class Index extends React.Component {
         <h1 className="pd2y pd1b aligncenter">
           登录到无限极产品大屏
         </h1>
+        <p className="font pd1b font14 aligncenter">按 <b>Alt</b> 键切换显示/隐藏菜单</p>
 
         <Form layout="horizontal" onSubmit={this.handleSubmit}>
           <FormItem
