@@ -4,6 +4,8 @@
 
 无限极产品大屏专用客户端
 
+[![Build status](https://ci.appveyor.com/api/projects/status/x3fsu946hys7p5gp?svg=true)](https://ci.appveyor.com/project/zxdong262/wxj-livescreen-client2)
+
 ## 下载
 https://github.com/zxdong262/wxj-livescreen-client2/releases
 
