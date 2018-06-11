@@ -40,3 +40,25 @@ npm run dev
 npm run release -l
 # visit dist/
 ```
+
+## build with appveyor
+```bash
+
+## 确保master是最新的，并且package.json已经升了版本号
+git co master
+git pull
+
+## delete old release branch
+git delete-branch release
+
+## create new release
+git create-branch release
+
+
+## 创建release 到https://github.com/zxdong262/wxj-livescreen-client2/releases/new
+## 注意标题和Tag version为 v1.x.x 注意要与package.json版本号一致
+## 先保存草稿 savedraft,
+## 到 https://ci.appveyor.com/project/zxdong262/wxj-livescreen-client2 查看构建进度
+## 等构建完毕，刷新，会看到下面多了构建好的资源 wxj-livescreen-client2-1.x.x-win.tar.gz
+## 点击publish release即可发布
+```
